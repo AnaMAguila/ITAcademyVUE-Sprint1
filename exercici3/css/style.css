@@ -1,0 +1,150 @@
+:root {
+  --color0: #fff;
+  --color1: #000;
+  --color2: #27394e;
+  --color3: #ea584b;
+  --color4: #f0763a;
+  --color5: #ffcc5e;
+  --color6: #1664a4;
+  --color7: #6399bb;
+  --color8: #f94c47;
+  --color9: #ffe380;
+  --color10: #e4a434;
+  --color11: #feff03;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  text-align: center;
+  color: var(--color0);
+  margin: 15px;
+  /* el tamaño máximo del contenido será 1200, pero estamos sumando los márgenes laterales */
+  max-width: 1230px;
+  margin: auto;
+}
+
+#superior {
+  margin: 15px 15px 0 15px;
+  background-color: var(--color1);
+  padding: 15px;
+}
+
+nav {
+  background-color: var(--color2);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;  
+}
+
+li {
+  background-color: var(--color3);
+  margin: 10px;
+  flex: 1;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--color0)
+}
+
+ul #menu2 {flex: 3;}
+
+header {
+  border: 10px solid var(--color4);
+  background-color: var(--color5);
+  margin-top: 10px;
+}
+
+main {
+margin: 15px 15px 0 15px;
+  background-color: var(--color1);
+  padding: 15px;
+  display: flex;
+}
+
+section{
+  flex: 3;
+  background-color: var(--color2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+article {
+  background-color: var(--color6);
+  margin: 5px;
+}
+
+#art_inferior {
+  background-color: var(--color7);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+aside {
+  flex: 1;
+  background-color: var(--color8);
+  padding: 5px;
+}
+
+aside div {
+  background-color: var(--color9);
+  margin: 5px;
+}
+
+footer {
+  margin: 15px 15px 0 15px;
+  border: 15px solid var(--color1);
+  background-color: var(--color10);
+}
+
+
+/*///////////////////////////////*/
+/*/// RESOLUCIÓN PARA TABLETS ///*/
+/*///////////////////////////////*/
+
+@media (max-width: 768px) {
+  
+  main {
+    background-color: var(--color11);
+    display: block;
+  }
+  
+  section{
+    margin-right: 0;
+  }
+  
+  aside {
+    margin-top: 15px;
+  }  
+}
+
+/*///////////////////////////////*/
+/*/// RESOLUCIÓN PARA MÓVILES ///*/
+/*///////////////////////////////*/
+
+@media (max-width: 481px) {
+  nav {
+    margin-bottom: 15px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}
